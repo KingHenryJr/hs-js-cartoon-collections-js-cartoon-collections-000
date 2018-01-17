@@ -1,54 +1,48 @@
-
-//add numbers in front of dwarves iterate through
-function dwarfRollCall(dwarves) {
-  var numberNames = "";
-  
-  for (var i = 0; i < dwarves.length; i++){
-    numberNames += ((i+1).toString() +". "+ dwarves[i]+ " ");
+//return string of numbered dwarves
+function dwarfRollCall(array) {
+  var numName = "";
+  for (var i = 0; i < array.length; i++){
+    numName += (i+1).toString() + ". " + array[i] + " ";
   }
   
-  return numberNames;
+  return numName;
 }
 
-function summonCaptainPlanet(planeteerCalls){
-//convert to upper case and add exlamation point
-  var arr = [];
+//convert to upper and add !
+//return array
+function summonCaptainPlanet(array) {
+  var loudCalls = [];
   
-  for (var i = 0; i < planeteerCalls.length; i++){
-    arr.push(planeteerCalls[i] + "!");
+  for(var i = 0; i < array.length; i++) {
+    loudCalls.push(array[i].toUpperCase() + "!");
   }
   
-  return arr;
+  return loudCalls;
 }
 
-function longPlaneteerCalls(words) {
-//iterate through words find out if they are > 4
-  for (var i = 0; i < words.length; i++) { 
-    if (words[i].length > 4) {
+//returns true or false
+function longPlaneteerCalls(array) {
+  for(var i = 0; i < array.length; i++){
+    if (array[i].length > 4) {
       return true;
-    } else {
+    } else { 
       return false;
     }
-  }
-    
+  }  
 }
 
-function findTheCheese (foods) {
-//3 types of cheese. return first cheese
-//iterate through Array + iterate through cheese 
-//compare the two
-var cheese = ["gouda", "cheddar", "camembert"];
-
-  for (var i = 0; i < foods.length; i++){
-    for (var c = 0; c < cheese.length; c++) {
-      
-      if (foods[i] === cheese[c]) {
-        return foods[i];
-      } 
-    } 
+//looks through array of strings returns first cheese
+function findTheCheese(array){
+  var snacks = ["cheddar", "gouda", "camembert"];
+  for (var i = 0; i < array.length; i++){
+    for (var h = 0; h < snacks.length; h++){
+      if (array[i] === snacks[h]) {
+        return snacks[h];
+      }
+    }
   }
-return "no cheese!";
-  
+ return "no cheese!"; 
 }
+
 
 
