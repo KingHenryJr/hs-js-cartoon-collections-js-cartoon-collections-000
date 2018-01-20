@@ -1,48 +1,69 @@
-//return string of numbered dwarves
-function dwarfRollCall(array) {
-  var numName = "";
-  for (var i = 0; i < array.length; i++){
-    numName += (i+1).toString() + ". " + array[i] + " ";
+
+
+// given dwarf names return a numbered string
+function dwarfRollCall(dwarves){
+  
+  var numNames = "";
+  
+  for (var i = 0; i < dwarves.length; i++){
+    
+    numNames += `${i+1}. ${dwarves[i]} `;
   }
   
-  return numName;
+  return numNames;
 }
 
-//convert to upper and add !
-//return array
-function summonCaptainPlanet(array) {
-  var loudCalls = [];
+
+// upper case array and add ! to end
+
+function summonCaptainPlanet(calls) {
   
-  for(var i = 0; i < array.length; i++) {
-    loudCalls.push(array[i].toUpperCase() + "!");
+  var yell = [];
+  
+  
+  for (var i = 0; i < calls.length; i++) {
+    
+    yell.push(calls[i].toUpperCase() + "!");
+    
   }
   
-  return loudCalls;
+  return yell;
 }
 
-//returns true or false
-function longPlaneteerCalls(array) {
-  for(var i = 0; i < array.length; i++){
-    if (array[i].length > 4) {
-      return true;
-    } else { 
+
+//returns true if calls > 4 characters false if other
+function longPlaneteerCalls(calls) {
+  
+  for(var i = 0; i < calls.length; i++) {
+    if (calls[i].length > 4){
+    return true;
+    } else {
       return false;
     }
-  }  
+  }
 }
 
-//looks through array of strings returns first cheese
-function findTheCheese(array){
-  var snacks = ["cheddar", "gouda", "camembert"];
-  for (var i = 0; i < array.length; i++){
-    for (var h = 0; h < snacks.length; h++){
-      if (array[i] === snacks[h]) {
-        return snacks[h];
-      }
+
+
+//looks through array of strings for 3 types of cheeses
+function findTheCheese(food){
+  
+  var cheeses = ["cheddar","gouda","camembert"];
+  
+  for (var i = 0; i < food.length; i++) {
+    
+    for (var c = 0; c < cheeses.length; c++) {
+      
+      if (food[i] === cheeses[c]) {
+        return cheeses[c];
+      } 
     }
   }
- return "no cheese!"; 
+
+  
+  return 'no cheese!';
 }
+
 
 
 
