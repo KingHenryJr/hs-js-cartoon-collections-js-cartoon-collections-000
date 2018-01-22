@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 // given dwarf names return a numbered string
@@ -67,3 +68,5 @@ function findTheCheese(food){
 
 
 
+=======
+>>>>>>> 7bea19c3f25645f84a8470eecd7c290755f4480a
